@@ -16,6 +16,7 @@ rm -rf $1/app/HybridPlatform
 rm -rf $1/app/Joyose
 rm -rf $1/app/MiLinkService
 rm -rf $1/app/KSICibaEngine
+rm -rf $1/app/XiaomiServiceFramework
 rm -rf $1/app/MiuiDaemon
 rm -rf $1/app/BuiltInPrintService
 rm -rf $1/app/PrintSpooler

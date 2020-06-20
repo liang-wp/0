@@ -213,6 +213,10 @@ elif [[ $(grep "ro.system.build.id" $systemdir/system/build.prop) ]]; then
 elif [[ $(grep "ro.build.id" $systemdir/system/build.prop) ]]; then
     displayid="ro.build.id"
 fi
+
+# Enable on-screen navbar once rom boots
+echo "qemu.hw.mainkeys=0" >> $1/build.prop
+
 displayid2=$(echo "$displayid" | sed 's/\./\\./g')
 bdisplay=$(grep "$displayid" $systemdir/system/build.prop | sed 's/\./\\./g; s:/:\\/:g; s/\,/\\,/g; s/\ /\\ /g')
 sed -i "s/$bdisplay/$displayid2=Built\.with\.ErfanGSI\.Tools/" $systemdir/system/build.prop
